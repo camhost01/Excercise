@@ -1,29 +1,31 @@
 package com.travelocity.TC;
 
-import java.util.Calendar;
 
+import static org.testng.Assert.assertTrue;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import com.travelocity.Utilities.Util;
 import com.travelocity.base.ConfigBase;
+import com.travelocity.pages.Home;
 
 public class Excercise1 extends ConfigBase{
-	Calendar c1 = Calendar.getInstance();
-	String day;
-	
+	Home home;
+	Util ut;
 	@BeforeMethod
 	public void before()
 	{
 		init();
+		home = new Home();
+		ut = new Util();
 	}
 	
 	@Test
 	public void ex1()
 	{
-		day=Integer.toString(c1.get(Calendar.DAY_OF_MONTH));
-		System.out.println(day);
+		assertTrue(home.part1());
 	}
 	
 	@AfterMethod

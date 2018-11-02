@@ -1,5 +1,6 @@
 package com.travelocity.base;
 
+import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -12,7 +13,10 @@ public class ConfigBase {
 	public static WebDriver driver;
 	public static WebDriverWait esperar;
 	private String navegador="chrome"; //pasar por parametros en el xml
-	
+	Calendar c1 = Calendar.getInstance();
+	public String Month=Integer.toString(c1.get(Calendar.MONTH));
+	public String Month2=Integer.toString(c1.get(Calendar.MONTH)+2);
+	public String Day=Integer.toString(c1.get(Calendar.DAY_OF_MONTH));
 	public void init()
 	{
 		if(navegador.equals("firefox"))
