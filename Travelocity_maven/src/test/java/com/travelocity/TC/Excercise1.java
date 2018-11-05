@@ -10,15 +10,21 @@ import org.testng.annotations.Test;
 import com.travelocity.Utilities.Util;
 import com.travelocity.base.ConfigBase;
 import com.travelocity.pages.Home;
+import com.travelocity.pages.Reserv;
+import com.travelocity.pages.Results;
 
 public class Excercise1 extends ConfigBase{
 	Home home;
+	Results results;
+	Reserv reserv;
 	Util ut;
 	@BeforeMethod
 	public void before()
 	{
 		init();
 		home = new Home();
+		results = new Results();
+		reserv = new Reserv();
 		ut = new Util();
 	}
 	
@@ -26,6 +32,8 @@ public class Excercise1 extends ConfigBase{
 	public void ex1()
 	{
 		assertTrue(home.part1());
+		assertTrue(results.part2());
+		assertTrue(reserv.part3());
 	}
 	
 	@AfterMethod

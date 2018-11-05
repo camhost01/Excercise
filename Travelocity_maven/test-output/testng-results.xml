@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="191510" started-at="2018-11-02T17:14:56Z" finished-at="2018-11-02T17:18:08Z">
+  <suite name="Default suite" duration-ms="137438" started-at="2018-11-05T13:53:44Z" finished-at="2018-11-05T13:56:02Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="191510" started-at="2018-11-02T17:14:56Z" finished-at="2018-11-02T17:18:08Z">
+    <test name="Default test" duration-ms="137438" started-at="2018-11-05T13:53:44Z" finished-at="2018-11-05T13:56:02Z">
       <class name="com.travelocity.TC.Excercise1">
-        <test-method status="PASS" signature="before()[pri:0, instance:com.travelocity.TC.Excercise1@2002fc1d]" name="before" is-config="true" duration-ms="11992" started-at="2018-11-02T17:14:56Z" finished-at="2018-11-02T17:15:08Z">
+        <test-method status="PASS" signature="before()[pri:0, instance:com.travelocity.TC.Excercise1@3aeaafa6]" name="before" is-config="true" duration-ms="36251" started-at="2018-11-05T13:53:44Z" finished-at="2018-11-05T13:54:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- before -->
-        <test-method status="PASS" signature="ex1()[pri:0, instance:com.travelocity.TC.Excercise1@2002fc1d]" name="ex1" duration-ms="109035" started-at="2018-11-02T17:15:08Z" finished-at="2018-11-02T17:16:57Z">
+        <test-method status="PASS" signature="ex1()[pri:0, instance:com.travelocity.TC.Excercise1@3aeaafa6]" name="ex1" duration-ms="91921" started-at="2018-11-05T13:54:21Z" finished-at="2018-11-05T13:55:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ex1 -->
-        <test-method status="PASS" signature="end()[pri:0, instance:com.travelocity.TC.Excercise1@2002fc1d]" name="end" is-config="true" duration-ms="1071" started-at="2018-11-02T17:17:07Z" finished-at="2018-11-02T17:17:08Z">
+        <test-method status="PASS" signature="end()[pri:0, instance:com.travelocity.TC.Excercise1@3aeaafa6]" name="end" is-config="true" duration-ms="9197" started-at="2018-11-05T13:55:53Z" finished-at="2018-11-05T13:56:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- end -->

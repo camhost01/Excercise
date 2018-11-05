@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class ConfigBase {
 	public static WebDriver driver;
 	public static WebDriverWait esperar;
-	private String navegador="chrome"; //pasar por parametros en el xml
+	private String navegador="firefox"; //pasar por parametros en el xml
 	Calendar c1 = Calendar.getInstance();
 	public String Month=Integer.toString(c1.get(Calendar.MONTH));
 	public String Month2=Integer.toString(c1.get(Calendar.MONTH)+2);
@@ -35,9 +35,9 @@ public class ConfigBase {
 		}
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		esperar = new WebDriverWait(driver, 5);
+		driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+		esperar = new WebDriverWait(driver, 30);
 		driver.get("https://www.travelocity.com/");
 	}
 }
