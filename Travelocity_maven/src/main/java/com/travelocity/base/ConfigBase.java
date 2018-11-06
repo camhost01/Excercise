@@ -14,9 +14,9 @@ public class ConfigBase {
 	public static WebDriverWait esperar;
 	private String navegador="firefox"; //pasar por parametros en el xml
 	Calendar c1 = Calendar.getInstance();
-	public String Month=Integer.toString(c1.get(Calendar.MONTH));
-	public String Month2=Integer.toString(c1.get(Calendar.MONTH)+2);
-	public String Day=Integer.toString(c1.get(Calendar.DAY_OF_MONTH));
+	public String Month=Integer.toString(c1.get(Calendar.MONTH)+2);
+	public String Day="4";
+	public String Day2="17";
 	public void init()
 	{
 		if(navegador.equals("firefox"))
@@ -35,9 +35,19 @@ public class ConfigBase {
 		}
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
-		esperar = new WebDriverWait(driver, 30);
+		driver.manage().timeouts().pageLoadTimeout(100, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		esperar = new WebDriverWait(driver, 10);
 		driver.get("https://www.travelocity.com/");
+	}
+	
+	public void delay(int a)
+	{
+		try {
+			Thread.sleep(a);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }

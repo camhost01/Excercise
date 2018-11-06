@@ -1,5 +1,6 @@
 package com.travelocity.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -18,9 +19,8 @@ public class Results extends ConfigBase{
 	WebElement FilterList;
 	
 	//BUTTON SELECT
-	 @FindBy(xpath="//button[@type='button' and @class='btn-secondary btn-action t-select-btn']")
-	 WebElement BtnSelect;
-	String BtnSelectPath="//button[@type='button' and @class='btn-secondary btn-action t-select-btn']";
+	@FindBy(xpath="//button[@type='button' and @data-test-id='select-button']")
+	WebElement BtnSelect;
 	
 	 @FindBy(xpath="//button[@class='btn-secondary btn-action t-select-btn btn disabled']")
 	 WebElement btnDis;
@@ -36,12 +36,11 @@ public class Results extends ConfigBase{
 		waitResults();
 		Select s = new Select(FilterList);
 		s.selectByIndex(3);
-		Util.WaitClickeableElement(BtnSelect);
-		Util.ElemetRepeated(BtnSelectPath, 0);
-		Util.WaitClickeableElement(BtnSelect);
-		Util.scrollScreen(250);
-		Util.ElemetRepeated(BtnSelectPath, 3);
-		check();
+		delay(2000);
+		SelecClick(1);
+		delay(2000);
+		Util.scrollScreen(500);
+		SelecClick(5);
 		return true;
 	}
 	
@@ -49,19 +48,16 @@ public class Results extends ConfigBase{
 	{
 		Util.WaitAllElement(homePage);
 	}
-	public void check()
+	public void SelecClick(int a)
 	{
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		try {
-			btnDis.isDisplayed();
-			Util.ElemetRepeated(BtnSelectPath, 3);
+		String BtnSelectPath="(//button[@type='button' and @data-test-id='select-button'])['"+a+"']";
+		WebElement btnSelect = driver.findElement(By.xpath(BtnSelectPath));
+		btnSelect.click();
+		/*try {
+			btnDis.isEnabled();
+			btnSelect.click();
 		} catch (Exception e) {
-			// TODO: handle exception
-		}
+			System.out.println("X");
+		}		*/
 	}
 }

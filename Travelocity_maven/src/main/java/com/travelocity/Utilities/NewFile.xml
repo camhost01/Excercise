@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Travelocity" parallel="none">
+<parameter name="author" value="Camilo Ramos" />
+<parameter name="searchKey" value="Colombia" />
+
+	
+	<test name="Travelocity">
+		<classes>
+			<class name="com.travelocity.TC.Excercise1"/>
+		</classes>
+	</test>
+</suite>

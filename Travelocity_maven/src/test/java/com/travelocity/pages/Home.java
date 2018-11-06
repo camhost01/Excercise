@@ -83,26 +83,26 @@ public class Home extends ConfigBase{
 	
 	public void AddDeparture()
 	{
-		String pathFlyinit ="//button[@data-month='"+Month+"' and @data-day='"+Day+"']";
 		Flystart.click();
-		WebElement dateinit = driver.findElement(By.xpath(pathFlyinit));
-		dateinit.click();
-		Flyreturn.click();
 		ArrowNext.click();
-		if(Month2.equals("12"))
+		if(Month.equals("12"))
 		{
-			Month2="0";
-		}else if(Month2.equals("13"))
+			Month="0";
+		}else if(Month.equals("13"))
 		{
-			Month2="1";
+			Month="1";
 			if(Day.equals("29")||Day.equals("30")||Day.equals("31"))
 			{
 				Day="28";
 			}
 		}
-			String pathFlyreturn ="//button[@data-month='"+Month2+"' and @data-day='"+Day+"']";
-			WebElement datereturn = driver.findElement(By.xpath(pathFlyreturn));
-			datereturn.click();		
+		String pathFlyinit ="//button[@data-month='"+Month+"' and @data-day='"+Day+"']";
+		WebElement dateinit = driver.findElement(By.xpath(pathFlyinit));
+		dateinit.click();
+		Flyreturn.click();
+		String pathFlyreturn ="//button[@data-month='"+Month+"' and @data-day='"+Day2+"']";
+		WebElement datereturn = driver.findElement(By.xpath(pathFlyreturn));
+		datereturn.click();		
 	}
 
 }
